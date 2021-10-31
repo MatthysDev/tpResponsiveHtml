@@ -8,6 +8,14 @@
   height: 50%;
   width: 50%;
 }
+ul {
+  margin-left: 0 !important;
+}
+
+header nav ul {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
 .reseaux {
   width: 120px;
   display: flex;
@@ -43,13 +51,17 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
+
 .iconfeat {
   width: 30px;
-  position: relative;
+  position: absolute;
+  top: -1rem;
+  left: 1em;
   background-color: green;
   margin-left: 15px;
 }
 .taillefeat {
+  background: yellow;
   width: 30%;
 }
 .txt-header {
@@ -61,10 +73,27 @@ ul {
   padding: 4rem;
 }
 .feature {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  width: 80%;
+  display: grid;
+  gap: 4em;
+  grid-template-columns: auto auto auto auto;
+  padding: 40px;
+}
+.featurecard svg {
+  position: absolute;
+  z-index: 2;
+  top: -2rem;
+  left: rem;
+  background-color: blue;
+  max-width: 64px;
+}
+.featurecard {
+  position: relative;
+  border: 2px;
+  border: solid;
+  padding: 4em 2em 2em 2em;
+}
+header nav {
+  background-color: white;
 }
 .borderfeat {
   border: solid;
@@ -108,9 +137,7 @@ ul {
   align-items: center;
   justify-content: center;
 }
-.icon {
-  width: 20px;
-}
+
 .footergauche {
   display: flex;
   flex-direction: column;
